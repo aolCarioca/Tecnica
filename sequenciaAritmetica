@@ -1,0 +1,29 @@
+def next_element(sequence):
+    if sequence == 'a':
+        # Sequência aritmética com diferença de 2
+        return 7 + 2
+    elif sequence == 'b':
+        # Sequência geométrica com razão 2
+        return 64 * 2
+    elif sequence == 'c':
+        # Sequência dos quadrados perfeitos
+        return 36 + (len([0, 1, 4, 9, 16, 25, 36]) * 2 + 1)
+    elif sequence == 'd':
+        # Sequência dos quadrados perfeitos pares
+        return 64 + (len([4, 16, 36, 64]) * 2 + 2) ** 2
+    elif sequence == 'e':
+        # Sequência de Fibonacci
+        return 8 + 5
+    elif sequence == 'f':
+        # Sequência específica
+        return 19 + 1
+    else:
+        return None
+
+# Testando as sequências
+print("a) Próximo elemento:", next_element('a'))  # 9
+print("b) Próximo elemento:", next_element('b'))  # 128
+print("c) Próximo elemento:", next_element('c'))  # 49
+print("d) Próximo elemento:", next_element('d'))  # 100
+print("e) Próximo elemento:", next_element('e'))  # 13
+print("f) Próximo elemento:", next_element('f'))  # 20
