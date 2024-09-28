@@ -1,0 +1,19 @@
+def fibonacci_sequence(limit):
+    """Calcula a sequência de Fibonacci até um valor maior ou igual ao limite"""
+    fib_sequence = [0, 1]
+    while fib_sequence[-1] < limit:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+def is_in_fibonacci(num):
+    """Verifica se o número informado pertence à sequência de Fibonacci"""
+    fib_sequence = fibonacci_sequence(num)
+    if num in fib_sequence:
+        return f"O número {num} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {num} não pertence à sequência de Fibonacci."
+
+# Número predefinido (altere este valor conforme necessário)
+num = 34
+result = is_in_fibonacci(num)
+print(result)
