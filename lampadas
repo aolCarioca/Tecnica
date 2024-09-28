@@ -1,0 +1,29 @@
+class Lampada:
+    def __init__(self):
+        self.ligada = False
+        self.quente = False
+
+def verificar_lampadas(lampadas):
+    for i, lampada in enumerate(lampadas):
+        if lampada.ligada:
+            return f"Lâmpada {i+1} está ligada e é controlada pelo segundo interruptor."
+        elif lampada.quente:
+            return f"Lâmpada {i+1} está quente e é controlada pelo primeiro interruptor."
+        else:
+            return f"Lâmpada {i+1} está fria e é controlada pelo terceiro interruptor."
+
+# Inicializando as lâmpadas
+lampadas = [Lampada() for _ in range(3)]
+
+# Simulando a lógica
+# Ligando o primeiro interruptor e esperando alguns minutos
+lampadas[0].ligada = True
+lampadas[0].quente = True
+
+# Desligando o primeiro interruptor e ligando o segundo interruptor
+lampadas[0].ligada = False
+lampadas[1].ligada = True
+
+# Verificando as lâmpadas
+resultado = verificar_lampadas(lampadas)
+print(resultado)
